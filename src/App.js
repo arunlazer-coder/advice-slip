@@ -11,7 +11,7 @@ export default class App extends Component {
         }
         
         fetchData = () => {
-            axios.get('http://api.adviceslip.com/advice')  
+            axios.get('https://api.adviceslip.com/advice')  
                 .then( re => {
                     const {advice} = re.data.slip
                         this.setState({advice});
