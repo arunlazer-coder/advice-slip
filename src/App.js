@@ -25,7 +25,7 @@ import "./App.css";
     <div className="app">
       <div className="card">
         <h1 className="heading">{advice}</h1>
-        <button className="button" onClick={() =>fetchData()}>
+        <button className="button" onClick={fetchData}>
           <span>Click for advice</span>
         </button>
       </div>
