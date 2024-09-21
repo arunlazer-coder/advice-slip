@@ -13,11 +13,11 @@ import "./App.css";
     axios
       .get("https://api.adviceslip.com/advice")
       .then((re) => {
-        const { advice } = re.data.slip;
+        const { advice } = re?.data?.slip;
         setAdvice(advice);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
   };
 
@@ -25,7 +25,7 @@ import "./App.css";
     <div className="app">
       <div className="card">
         <h1 className="heading">{advice}</h1>
-        <button className="button" onClick={() =>fetchData()}>
+        <button className="button" onClick={fetchData}>
           <span>Click for advice</span>
         </button>
       </div>
